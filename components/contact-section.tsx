@@ -25,19 +25,38 @@ export function ContactSection() {
   }
 
   const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault()
-    setIsSubmitting(true)
+  e.preventDefault()
+  setIsSubmitting(true)
 
-    // Simulate form submission
-    setTimeout(() => {
+    try {
+      const response = await fetch("http://localhost/mautic/form/submit/1", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/x-www-form-urlencoded",
+        },
+        body: new URLSearchParams({
+          name: formData.name,
+          email: formData.email,
+          phone: formData.phone,
+          message: formData.message,
+        }),
+      })
+
+      if (response.ok) {
+        setSubmitStatus("success")
+        setFormData({ name: "", email: "", phone: "", message: "" })
+      } else {
+        setSubmitStatus("error")
+      }
+    } catch (error) {
+      console.error("Mautic submission error:", error)
+      setSubmitStatus("error")
+    } finally {
       setIsSubmitting(false)
-      setSubmitStatus("success")
-      setFormData({ name: "", email: "", phone: "", message: "" })
-
-      // Reset status after 3 seconds
       setTimeout(() => setSubmitStatus("idle"), 3000)
-    }, 1000)
+    }
   }
+
 
   return (
     <section id="contact" className="py-20 px-4 sm:px-6 lg:px-8 bg-card/30">
