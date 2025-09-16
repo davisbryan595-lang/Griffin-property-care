@@ -55,15 +55,16 @@ export function Navbar() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
-          <div className="flex-shrink-0">
-            <Image
-              src="/logo.jpeg" // your logo file in public folder
-              alt="Griffin's Property Care Logo"
-              width={160} // adjust as needed
-              height={30} // adjust as needed
-              className="object-contain"
-            />
-          </div>
+          <div className="h-16 flex items-center">
+  <Image
+    src="/logo.jpeg"
+    alt="Griffin's Property Care Logo"
+    width={0}
+    height={0}
+    sizes="100vw"
+    className="h-full w-auto object-contain"
+  />
+</div>
 
           {/* Desktop Navigation */}
           <div className="hidden md:block">
