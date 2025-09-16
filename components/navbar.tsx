@@ -59,7 +59,7 @@ export function Navbar() {
   <Image
     src="/logo.jpeg"
     alt="Griffin's Property Care Logo"
-    width={200}   // control width
+    width={300}   // control width
     height={64}   // match navbar height (h-16 = 64px)
     className="object-cover"
   />
