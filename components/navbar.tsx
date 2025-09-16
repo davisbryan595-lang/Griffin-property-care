@@ -1,6 +1,7 @@
 "use client"
 
 import { useState, useEffect } from "react"
+import Image from "next/image"
 import { Button } from "@/components/ui/button"
 import { Menu, X, Phone } from "lucide-react"
 
@@ -53,14 +54,16 @@ export function Navbar() {
     <nav className="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-sm border-b border-border">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
-          <div className="flex-shrink-0 w-20 h-20 relative rounded-xl overflow-hidden bg-gray-700">
-        <Image
-          src="/logo.png"
-          alt="Logo"
-          fill
-          className="object-cover"
-        />
-      </div>
+          {/* Logo */}
+          <div className="flex-shrink-0">
+            <Image
+              src="/logo.jpeg" // your logo file in public folder
+              alt="Griffin's Property Care Logo"
+              width={160} // adjust as needed
+              height={30} // adjust as needed
+              className="object-contain"
+            />
+          </div>
 
           {/* Desktop Navigation */}
           <div className="hidden md:block">
