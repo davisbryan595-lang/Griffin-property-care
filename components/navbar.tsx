@@ -61,7 +61,7 @@ export function Navbar() {
               alt="Griffin's Property Care Logo"
               width={160} // adjust as needed
               height={30} // adjust as needed
-              className="object-cover"
+              className="object-contain"
             />
           </div>
 
