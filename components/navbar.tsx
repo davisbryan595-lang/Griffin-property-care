@@ -59,8 +59,8 @@ export function Navbar() {
             <Image
               src="/logo.jpeg"
               alt="Griffin's Property Care Logo"
-              width={0}
-              height={0}
+              width={120}
+              height={60}
               sizes="100vw"
               className="h-full w-40 object-contain"
             />
