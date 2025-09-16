@@ -62,7 +62,7 @@ export function Navbar() {
               width={0}
               height={0}
               sizes="100vw"
-              className="h-full w-auto object-contain"
+              className="h-full w-40 object-contain"
             />
           </div>
           {/* Desktop Navigation */}
