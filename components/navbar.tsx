@@ -57,7 +57,7 @@ export function Navbar() {
           {/* Logo */}
           <div className="h-16 flex items-center">
             <Image
-              src="/logo1.png"
+              src="/logo.jpeg"
               alt="Griffin's Property Care Logo"
               width={0}
               height={0}
